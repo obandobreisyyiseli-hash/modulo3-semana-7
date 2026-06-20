@@ -1,0 +1,14 @@
+Cuando consultamos el endpoint GET /reportes, el servidor responde con el contenido de la variable reportes en formato JSON.
+
+En este momento, como todavía no se han agregado reportes, la respuesta es un arreglo vacío:
+[]
+
+Esto ocurre porque en el código el servidor no hace ninguna consulta a una base de datos; mantiene los reportes en memoria dentro del arreglo reportes.
+
+Si se envía una petición POST a /reportes con un cuerpo como:
+{
+  "tipo": "incidente",
+  "descripcion": "Problema con el sistema"
+}
+
+entonces el servidor crea un objeto con id, tipo y descripcion, lo agrega al arreglo y devuelve un mensaje de confirmación junto con el reporte creado.

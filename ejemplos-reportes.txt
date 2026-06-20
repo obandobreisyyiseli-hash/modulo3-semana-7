@@ -1,0 +1,8 @@
+
+  "mensaje": "Reporte registrado",
+  "reporte": {
+    "id": 2,
+    "tipo": "ejemplo",
+    "descripcion": "Este es un ejemplo enviado desde la terminal"
+  }
+}
